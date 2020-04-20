@@ -1,0 +1,853 @@
+<!-- 2장. HTML 태그 기본 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://vjs.zencdn.net/7.7.5/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+    <style>
+        table{
+            margin-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><b>2장. HTML5 태그 기본</b></h1>
+
+
+    <a href="#tag01">html5 기본 용어 정리</a>
+    <a href="#tag02">html5 페이지 구조</a>
+    <a href="#tag03">글자 형태</a>
+    <a href="#tag04">목록</a>
+    <a href="#tag05">테이블</a>    
+    <a href="#tag06">이미지</a>    
+    <a href="#tag07">오디오</a>
+    <a href="#tag08">비디오</a>
+    <a href="#tag09">입력 양식</a>
+    <a href="#tag10">공간 분할</a>
+    
+    <hr>
+    
+    <h3 id="tag01"><i>HTML5 기본 용어 정리</i></h3>    
+    <ul>
+        <p><ins>태그와 요소</ins></p>
+        <ul>
+            <li>태그 : HTML 페이지에서 객체를 만들 때 사용하는 것</li>
+            <li>요소 : 태그를 사용해 만들어진 객체</li>
+            <br/>
+            <fieldset>
+                <legend>예) HTML5 요소 - 시작 태그와 끝 태그를 별도로 입혁하는 요소</legend>
+                <table>
+                    <tr>
+                        <th>
+                            <ruby>
+                                <span>(h1)</span>
+                                <rt>시작태그</rt>
+                                <span>Hello Html5</span>                                
+                            </ruby>
+                        </th>
+
+                        <th>
+                            <ruby>
+                                <span>(/h1)</span>
+                                <rt>끝태그</rt>
+                            </ruby>
+                            <span>※꺽쇠 대신 괄호로 표현</span>
+                        </th>                        
+                    </tr>
+                    
+                    <tr>
+                        <th>
+                            <ruby>
+                                <span>(br)</span>
+                                <rt>HTML5표기법</rt>
+                            </ruby>
+                        </th>
+
+                        <th>
+                            <ruby>
+                                <span>(br/)</span>
+                                <rt>XHTML5표기법</rt>
+                            </ruby>
+                        </th>
+                    </tr>
+
+                </table>
+            </fieldset>
+        </ul>
+
+        <p><ins>속성</ins></p>
+        <ul>
+            <li>태그에 추가 정보를 부여할 때 사용</li>
+            <br>
+            <fieldset>
+                <legend>HTML5 태그의 데이터 표현 - h1 태그의 title 속성</legend>
+                <table>
+                    <tr>
+                        <th>
+                            <ruby>
+                                <span>(h1 title="headeer")</span>
+                                <rt>속성블록</rt>                                
+                            </ruby>
+                        </th>
+
+                        <th>
+                            <ruby>
+                                <span>Hello HTML5(/h1)</span>
+                                <rt>내부문자</rt>
+                            </ruby>                            
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <ruby>                                
+                                <rt>title : 속성 이름</rt>
+                            </ruby>
+                            <ruby>                                
+                                <rt>header : 속성 값</rt>
+                            </ruby>
+                        </th>                       
+                    </tr>
+
+                </table>
+            </fieldset>
+            <br/>
+
+            <fieldset>
+                <legend>HTML5 태그의 데이터 표현 - img 태그의 src 속성</legend>
+                <table>
+                    <tr>
+                        <th>
+                            <ruby>
+                                (img src="image.png"/)
+                                <rt>속성블록</rt>
+                            </ruby>
+                        <th>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <ruby><rt>src : 속성이름</rt></ruby>
+                            <ruby><rt>"image.gnp"속성값</rt></ruby>
+                        </th>                        
+                    </tr>
+                </table>
+            </fieldset>
+        </ul>
+
+        <p><ins>주석</ins></p>
+        <ul>
+            <li>프로그램의 실행에 영향을 미치지 않고 설명을 위한 목적으로 사용하는 코드</li>
+        </ul>       
+    </ul>
+    <hr>
+
+    <h3 id="tag02"><i>HTML5 페이지 구조</i></h3>
+    <ul>
+        <p><ins>lang 속성</ins></p>
+        <ul>
+            <li>검색 엔진이 웹 페이지를 탐색할 때 해당 웹 페이지가 어떤 언어로 만들어져 있는지 쉽게 인식하게 만든다.</li>
+            <li>html 태그에 입력 ex) (html lang="ko")</li>
+            <li>전 세계적인 데이터 네트워크 구축을 위해서는 lang 속성을 입력하는 것이 좋다.</li>
+        </ul>
+        
+        <p><ins>head 태그 내부에 넣을 수 있는 태그</ins></p>
+        <ul>
+            <li>meta : 웹 페이지에 추가 정보를 전달</li>            
+            <li>script : 웹 페이지에 스크립트 추가</li>
+            <li>link : 웹 페이지에 다른 파일 추가</li>
+            <li>style : 웹 페이지에 스타일시트 추가</li>
+            <li>base : 웹 페이지의 기본 경로 지정</li>
+            <li>검색 엔진이 웹 페이지를 탐색할 때 해당 웹 페이지</li>
+            <li>title : 웹 페이지의 제목 (웹 브라우저의 상단에 표시된다.)</li>
+            <p>- title 태그도 html 태그의 lang 속성처럼 검색 엔진에게 웹 페이지의 제목과 관련된 정보를 주는 데 사용되므로 입력하는 것이 좋다.</p>
+        </ul>
+    </ul>
+    <hr>
+
+    <h3 id="tag03"><i>글자 형태</i></h3>
+    <ul>
+        <p><ins>제목</ins></p>
+        <p>HTML5의 대표적인 글자 태그는 제목을 입력할 때 사용하는 제목 글자 태그</p>
+        <ul>
+            <p>- 제목 글자 태그 -</p>
+            <p>일반적으로 웹 페이지를 만들 때는 h1 태그부터 h3 태그까지 사용</p>
+            <li>h1 : 첫 번째로 큰 제목 글자 태그</li>
+            <li>h2 : 두 번째로 큰 제목 글자 태그</li>
+            <li>h3 : 세 번째로 큰 제목 글자 태그</li>
+            <li>h4 : 네 번째로 큰 제목 글자 태그</li>
+            <li>h5 : 다섯 번째로 큰 제목 글자 태그</li>
+            <li>h6 : 여섯 번째로 큰 제목 글자 태그</li>
+        </ul>
+
+        <p><ins>본문</ins></p>
+        <ul>
+            <p>- 본문 태그(1)</p>
+            <li>p : 본문 글자 태그, 하나의 단락을 만들 수 있다.</li>
+
+            <p>- 본문 태그(2)</p>
+            <li>br : 줄바꿈 태그 (개행)</li>
+            <li>hr : 수평 줄 태그 (가로로 그어지는 줄)</li>
+        </ul>
+
+        <p><ins>앵커 태그</ins></p>
+        <ul>
+            <li>HTML5에서 가장 중요한 단어 H = 하이퍼텍스트</li>
+            <li>하이퍼텍스트 : 사용자의 선택에 따라 특정한 정보와 관련된 부분으로 이동할 수 있게 조직화된 문서</li>
+            <li>>>>>>>>>>>>> 조직화된 문서 형태를 가질 수 있는 이유 : 앵커 태그 때문</li>
+            <li>- a : 앵커 태그 (a 태그의 href 속성을 사용하여 이동하고자 하는 웹 페이지를 지정)</li>
+            
+            <fieldset>
+                <legend>하이퍼링크 태그</legend>
+                <table>
+                    (body)<br/>
+                        (a href="htpp://hanbit.co.kr")Hanbit(/a)(br/)<br/>
+                        (a href="htpp://github.com")GitHub(/a)(br/)<br/>
+                    (/body)
+                </table>
+            </fieldset>            
+        </ul>
+
+        <p><ins>빈 링크</ins></p>
+        <ul>
+            <li>하이퍼링크 기능을 제거해도 웹 표준을 따르려면 a 태그에 href 속성을 반드시 입력해야 한다.</li>
+            <li>웹 표준을 지키면서 이동하지 않는 a 태그를 만들 때 : href 속성에 #을 입력 >> 이를 빈 링크라고 부른다.</li>
+            <fieldset>
+                (li)(a href="#")언론사 전체보기(/a)<br/>
+                (li)(a href="#")종합지(/a)<br/>
+                (li)(a href="#")방송/통신(/a)<br/>
+            </fieldset>
+        </ul>
+
+        <p><ins>페이지 내부 이동</ins></p>
+        <ul>
+            <li>단일 웹 페이지에서 많이 사용하는 기능</li>
+            <li>a 태그를 이용하면 현재 페이지 내부에서 원하는 장소로 이동 가능 >>>>> 원하는 장소에 id 속성을 부여</li>
+            <li>원하는 태그에 id 속성 부여하고 a 태그의 href 속성에 #아이디 형태의 문자열 입력</li>
+
+            <fieldset>
+                (a href="#alpha")Move to Alpha(/a)<br/>
+                (a href="#beta")Move to Beta(/a)<br/>
+                (a href="#gamma")Move to Gamma(/a)<br/>
+                <hr/>
+                (h1 id="#alpha")Alpha(/h1)<br/>
+                (p)blblblblblblblblblbl....(/p)<br/>
+                (h1 id="#beta")Beta(/h1)<br/>
+                (p)blblblblblblblblblbl....(/p)<br/>
+                (h1 id="#gamma")Gamma(/h1)<br/>
+                (p)blblblblblblblblblbl....(/p)<br/>
+            </fieldset>
+        </ul>
+
+        <p><ins>글자 형태</ins></p>        
+        <ul>
+            <p>- 글자 형태 태그 : 각 글자에 형태 및 의미를 부여할 때 사용 -</p>
+            <li>b : 굵은 글자</li>
+            <li>i : 기울어진 글자</li>
+            <li>samll : 작은 글자</li>
+            <li>sub : 아래에 달라 붙는 글자</li>
+            <li>sup : 위에 달라 붙는 글자</li>
+            <li>ins : 밑줄  글자</li>
+            <li>del : 가운데 줄이 그어진 글자</li>
+        </ul>
+
+        <p><ins>루비 문자</ins></p>
+        <ul>            
+            <li>한자 위에 표시되는 글자</li>
+            <li>일본어나 한자어에 많이 사용하는 태그</li>
+            <ul>
+                <p>- 루비 태그 -</p>
+                <li>ruby : 루비 문자 선언 태그</li>
+                <li>rt : 위에 위치하는 작은 문자 태그</li>
+                <li>rp : ruby 태그를 지원할 경우 출력되지 않는 태그</li>
+            </ul>
+
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>
+                            (body)<br/>
+                                (ruby)<br/>
+                                    (span)大韓民國(/span)<br/>
+                                    (rt)대한민국(/rt)<br/>
+                                (/ruby)<br/>
+                            (/body)<br/>
+                        </th>
+
+                        <th>
+                            <ruby>
+                                <span>大韓民國</span>
+                                <rt>대한민국</rt>
+                            </ruby>
+                        </th>
+                    </tr>                
+                </table>
+
+            </fieldset>
+            
+            
+        </ul>
+    </ul>
+    <hr>
+
+    <h3 id="tag04"><i>목록 태그</i></h3>
+    <ul>
+        <p><ins>기본 목록</ins></p>
+        <ul>
+            <p>일반적으로 페이지를 이동할 때 사용되는 메뉴 >>> 내비게이션 메뉴</p>
+            <p>내비게이션 메뉴를 만들 때 목록 태그를 사용하는 것이 일반적</p>
+            <p>- 목록 태그 -</p>
+            <ul>
+                <li>ul : 순서가 없는 목록 (정렬되지 않는 목록)</li>
+                <li>ol : 순서가 있는 목록 (정렬된 목록)</li>
+                <li>li : 목록 요소</li>
+                <li>중첩해서 목록을 만들고 싶을 때는 li 태그 안에 목록 태그를 중첩해서 입력</li>
+            </ul>            
+        </ul>
+
+        <p><ins>정의 목록</ins></p>
+        <ul>
+            <p> : 단어를 써놓고 그 정의를 풀이한 목록</p>
+            <p>특정 용어와 그 정의를 표현할 때 사용하는 태그</p>
+            <p>- 정의 목록 -</p>
+            <ul>
+                <li>dl : 정의 목록</li>
+                <li>dt : 정의 용어</li>
+                <li>dd : 정의 설명</li>
+            </ul>
+        </ul>        
+    </ul>        
+    <hr>
+    
+    <h3 id="tag05"><i>테이블</i></h3>
+    <ul>
+        <p><ins>테이블 태그 기본</ins></p>        
+        <ul>
+            <p> : HTML 페이지에서 표를 만들 때 사용</p>
+            <p>- 테이블 요소 태그 -</p>
+            <ul>
+                <li>tr(table row) : 표 내부의 행</li>
+                <li>th(table header) : 행 내부의 제목 셀</li>
+                <li>td(table data) : 행 내부의 일반 셀</li>
+            </ul>
+            <br/>
+
+            <table border="1">
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 1</td>
+                </tr>
+                <tr>
+                    <td>Data 2</td>
+                    <td>Data 2</td>
+                </tr>
+            </table>
+            <br>
+    
+            <table border="1">
+                <caption>Caption</caption>
+                <colgroup>
+                    <col span="2" style="background: coral">
+                    <col style="background: cornflowerblue;">
+                </colgroup>
+                <thead style="background: cadetblue;">
+                    <tr>
+                        <th>Table Header1</th>
+                        <th>Table Header2</th>
+                        <th>Table Header3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Table Data4</td>
+                        <td>Table Data5</td>
+                        <td>Table Data6</td>
+                    </tr>
+                    <tr>
+                        <td>Table Data7</td>
+                        <td>Table Data8</td>
+                        <td>Table Data9</td>                
+                    </tr>
+                    <tr>
+                        <td>Table Data10</td>
+                        <td>Table Data11</td>
+                        <td>Table Data12</td>
+                    </tr>
+                </tbody>
+                <tfoot style="background: goldenrod;">
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br>
+
+        </ul>
+        
+
+        <p><ins>테이블 태그의 속성</ins></p>
+        <ul>
+            <p>- table 태그의 속성 -</p>
+            <ul><li>border : 표의 테두리 두께를 지정</li></ul>
+            
+            <p>- th 태그와 td 태그 속성 -</p>
+            <ul>
+                <li>rowspan : 셀의 높이 지정</li>
+                <li>colspan : 셀의 너비 지정</li>                
+            </ul>
+            <br/>
+
+            <table border="1">
+                <tr>
+                    <th colspan="3">Header 1</th>
+                    <th rowspan="3">Header 2</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td rowspan="2">Data 2</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 5</td>
+                    <td>Data 6</td> <!-- Data2 때문에 밀려서 3번째 열에 나타남 -->
+                </tr>
+            </table>
+        </ul>
+    </ul>
+    <hr>
+
+    <h3 id="tag06"><i>이미지</i></h3>
+    <ul>
+        <p><ins>img 태그의 속성</ins></p>
+        <ul>
+            <li>src : 이미지의 경로 지정</li>
+            <li>alt : 이미지가 없을 때 나오는 글자 지정</li>
+            <li>width : 이미지의 너비 지정</li>
+            <li>height : 이미지의 높이 지정</li>
+            <br/>
+            <img src="test01.jpg" alt="제니" width="300">        
+            <img src="Nothing"" alt="그림이 존재하지 않습니다." width="300">
+        </ul><br>
+
+        <p><ins>placehold.it</ins></p>
+        <ul>
+            <li>이미지 크기는 아는데 아직 이미지가 없을 때 사용할 수 있는 좋은 방법</li>
+            <li>placehold.it : 원하는 크기의 이미지를 제공해주는 사이트</li>
+            <li>형식 >>> http://placehold.it/너비x높이</li>
+            <br>
+            <img src="http://placehold.it/300x335" />
+            <img src="http://placehold.it/200x150" />
+            <img src="http://placehold.it/100x100" />            
+        </ul>        
+    </ul>
+    <hr>
+
+    <h3 id="tag07"><i>오디오</i></h3>
+    <ul>
+        <p> : 웹 브라우저에서 플러그인의 도움 없이 음악을 재생할 수 있게 만들어주는 HTML5 태그</p>
+        <P> ( 이 기능은 HTML5에서 추가된 기능이므로 인터넷 익스플로러 8이하에서는 사용할 수 없음 )</P>
+
+        <p><ins>audio 태그</ins></p>
+        <ul>
+            <P>- audio 태그의 속성 -</P>
+            <li>scr : 음악 파일 경로 지정</li>
+            <li>preload : 음악 재생 전 모두 불러올지 지정</li>
+            <li>autoplay : 음악을 자동 재생할지 지정</li>
+            <li>loop : 음악을 반복할지 지정</li>
+            <li>controls : 음악 재생 도구를 출력할지 지정</li>
+            <br>
+            <audio src="Kalimba.mp3" controls="controls"></audio>
+            <br>
+            <fieldset>
+                <legend>다음 2가지 방법 많이 사용</legend>
+                <p>- audio 태그의 속성 표기 방법(1) - XHTML5</p>
+                <audio src="Kalimba.mp3" controls="controls" autoplay="autoplay"></audio>
+                <p>- audio 태그의 속성 표기 방법(2) - HTML5</p>
+                <audio src="Kalimba.mp3" controls autoplay></audio>
+            </fieldset>
+        </ul>
+
+        <p><ins>source 태그</ins></p>
+        <ul>
+            <p>audio 태그 또는 video 태그 안에 입력하는 태그</p>
+            <p>웹 브라우저마다 지원하는 음악 파일 형식이 미세하게 달라 실행되지 않을 수도 있기 때문에 사용</p>
+            <audio controls="controls">
+                <source src="Kalimba.mp3" type="audio/mp3">
+                <source src="Kalimba.ogg" type="audio/ogg">
+            </audio>
+            <p>※ source 태그의 type 속성은 입력하지 않아도 상관없지만 음악 파일을 내려받은 뒤에 재생 가능한 파일인지 확인하므로 트래픽이 낭비된다.</p>
+            <p>따라서 type 속성을 꼭 지정해주자 !</p>
+        </ul>        
+    </ul>
+    <hr>
+
+    <h3 id="tag08"><i>비디오 태그</i></h3>
+    <ul>
+        <p><ins>video 태그</ins></p>
+        <ul>
+            <p>- video 태그의 속성 -</p>
+            <li>src : 비디오 파일의 경로 지정</li>
+            <li>poster : 비디오 준비 중일 때의 파일 경로 지정</li>
+            <li>preload : 비디오를 재생하기 전에 모두 불러올지 지정</li>
+            <li>autoplay : 비디오를 자동 재생할지 지정</li>
+            <li>loop : 비디오를 반복할지 지정</li>
+            <li>controls : 비디오 재생 도구를 출력할지 지정</li>
+            <li>width : 비디오의 너비 지정</li>
+            <li>height : 비디오의 높이 지정</li>
+
+            <p>video 태그도 audio 태그처럼 웹 브라우저마다 지원하는 비디오 파일 형식이 달라 실행되지 않을 수도 있기 때문에 source 태그를 사용</p>
+            <video controls="controls">
+                <source src="Wildlif.mp4" type="vidio/mp4">
+                <source src="Wildlif.webm" type="vidio/webm">
+            </video><br><br>
+
+            <video poster="http://placehold.it/650x200" width="650" height="200" controls="controls">
+                <source src="Wildlif.mp4" type="vidio/mp4">
+                <source src="Wildlif.webm" type="vidio/webm">
+            </video>
+            <video poster="http://placehold.it/" width="650" height="200" controls="controls">
+                <source src="Wildlif.mp4" type="vidio/mp4">
+                <source src="Wildlif.webm" type="vidio/webm">
+            </video>
+            <p>※poster 속성에 width와 height를 지정하지 않아도 이미지 생성시 설정해 주었기때문에 괜찮지만, 이미지 지정시 설정하지 않으면 크기가 얼마인지 이미지 위에 숫자가 나타나지 않는다.</p>
+            <br>
+
+            <p>※웹 브라우저마다 표시되는 video 태그의 형태가 일관되지 않으므로 문제가 생기거나 익스플로러 8 이하에서는 video 태그가 동작하지 않는다.</p>
+            <p>이러한 문제를 해결하는 간단한 플로그인 : video.js 클로그인</p>
+            <p>만들어진 스타일시트와 자바스크립트를 활용 - </p>
+            <p>head 태그에 link 태그와 script 태그를 입력 >> video.js 플로그인의 홈페이지에서 복사</p>
+            <video controls="controls" width="640" height="340" class="video-js" data-setup="{}">
+                <source src="Wildlif.mp4" type="vidio/mp4">
+                <source src="Wildlif.webm" type="vidio/webm">
+            </video>
+            <p>이제 모든 웹에서 실행가능하며 익스플로러8에서는 자동으로 플래시에 담겨 동영상이 재생된다.</p>
+        </ul>        
+    </ul>
+    <hr>
+
+    <h3 id="tag09"><i>입력 양식 태그</i></h3>
+    <ul>
+        <p><ins>입력 양식 개요</ins></p>
+        <ul>
+            <p> : 사용자에게 입력받는 공간 ex) 회원 가입 양식</p>
+            <form>
+                <input type="text" name="search">
+                <input type="submit">
+            </form>
+
+            <p>- form 태그의 속성 -</p>
+            <ul>
+                <li>action : 입력 데이터의 전달 위치 지정</li>
+                <li>method : 입력 데이터의 전달 방식 선택</li>
+
+                <p><b>mehtod 속성 중 자주 쓰이는 것</b></p>
+                <li>GET : 주소에 데이터를 입력해서 보내는 방식(url변경), 한정적 크기</li>
+                <li>POST : 비밀스럽게 데이터를 전달하는 방식(url변경 x), 용량 제한 없음</li>
+            </ul>
+        </ul>        
+        
+        <p><ins>기본 input 태그</ins></p>
+        <ul>
+            <p>※ 일반적으로 input 태그는 form 태그 안에 있어야 하지만 최근 Ajax기술의 활성화로 인해 이 규칙을 지키지 않는 경우가 늘고 있다.</p>
+            <p>ex) input태그의 type 속성(1)</p>
+            <form>
+                <input type="text" name="name"><br>
+                <input type="password" name="password"><br>
+                <input type="file" name="file"><br>
+                <input type="submit">
+            </form>
+        </ul>        
+
+        <p>- input 태그의 type 속성값 -</p>
+        <ul>            
+            <li>button : 버튼 생성</li>            
+                <input type="button"><br>            
+
+            <li>checkbox : 체크박스 생성</li>            
+                <input type="checkbox"><br>            
+
+            <li>file : 파일 입력 양식 생성</li>            
+                <input type="file"><br>            
+            
+            <li>hidden : 숨김</li>            
+                <input type="hidden"><br>            
+
+            <li>image : 이미지 형태 생성</li>            
+                <input type="image"><br>
+            
+            <li>password : 비밀번호 입력 양식 생성</li>            
+                <input type="password"><br>            
+
+            <li>radio : 라디오 버튼 생성</li>            
+                <input type="radio"><br>            
+
+            <li>reset : 초기화 버튼 생성</li>            
+                <input type="reset"><br>            
+
+            <li>submit : 제출 버튼 생성</li>            
+                <input type="submit"><br>            
+
+            <li>text : 글자 입력 양식 생성</li>            
+                <input type="text"><br>            
+
+            <p>- label 태그 -</p>
+            <li>input 태그를 설명하는데 사용</li>
+            <form>
+                <label>이름</label>
+                <input type="text">
+            </form>
+
+            <p>※ label 태그는 어떠한 input 태그를 설명하는지 표시해줘야 한다.</p>
+            <p>input 태그에 id 속성을 입력하고 label 태그에 for속성 입력</p>
+            <form>
+                <label for="name">이름</label>
+                <input id="name" type="text">
+            </form>
+            <p>>> label 태그 클릭시 자동으로 input 태그에 초점이 맞춰진다 = label 태그인 이름을 클릭하면 input 태그에 커서가 생긴다</p>
+            <p>체크박스나 라이도 버튼일 경우 label 태그 선택시 input 태그 체크됨</p>
+        </ul>        
+
+        <p><ins>HTML5 입력 양식 태그</ins></p>
+        <ul>
+            <li>color : 색상 선택 양식 생성</li>            
+                <input type="color">            
+            
+            <li>date : 일 선택 양식 생성</li>            
+                <input type="date">            
+
+            <li>datetime : 날짜 선택 양식 생성</li>            
+                <input type="datetime">            
+
+            <li>datetime-local : 지역 날짜 선택 양식 생성</li>            
+                <input type="datetime-local">            
+            
+            <li>email : 이메일 입력 양식 생성</li>            
+                <input type="email">            
+
+            <li>month : 월 선택 양식</li>            
+                <input type="month">            
+
+            <li>number : 숫자 생성 양식</li>            
+                <input type="number">            
+
+            <li>range : 범위 선택 양식 생성</li>            
+                <input type="range">            
+
+            <li>search : 검색어 입력 양식 생성</li>            
+                <input type="search">            
+
+            <li>tel : 전화번호 입력 양식 생성</li>            
+                <input type="tel">            
+
+            <li>time : 시간 선택 양식 생성</li>            
+                <input type="time">            
+
+            <li>url : URL 주소 입력 양식 생성</li>            
+                <input type="url">            
+
+            <li>week : 주 선택 양식 생성</li>            
+                <input type="week">            
+        </ul>
+
+        <p><ins>textarea 태그</ins></p>
+        <ul>
+            <p>input 태그가 아닌 입력창 2개 : select, textarea</p>
+            <p>textarea ) 사용자가 크기 조절 가능</p>
+
+            <textarea name="" id="" cols="50" rows="3">
+                Textarea
+                텍스트를 입력하세요.
+            </textarea>
+        
+            <ul>
+                <p>- textarea 태그의 속성 -</p>
+                <li>cols : 태그의 너비 지정</li>
+                <li>rows : 태그의 높이 지정</li>
+            </ul>
+
+
+        </ul>
+
+        <p><ins>select 태그</ins></p>
+        <ul>
+            <p>여러 개의 목록에서 몇 가지를 선택할 수 있는 입력 양식 요소</p>
+            <ul>
+                <p>- select 태그 -</p>
+                <li>select : 선택 양식 생성</li>
+                <ul>
+                    <p>일반적인 경우에도 select 태그를 잘 사용하지 않는다.</p>
+                    <p>웹 페이지와 어울리게 만들기 어렵기 때문에 자바스크립트를 사용해 하나하나 만든다.</p>
+                    <p>따라서 옵션을 선택할 수 있는 수단이 select 태그만 있는 것은 아니다.</p>
+                </ul>
+
+                <li>optgroup : 옵션 그룹화</li>
+                <ul>
+                    <select name="" id="">
+                        <optgroup label="HTML5">
+                            <option>Multimedia Tag</option>
+                            <option value="">Connectivity</option>
+                            <option value="">Device Access</option>
+                        </optgroup>
+                        <optgroup label="CSS3">
+                            <option value="">Animation</option>
+                            <option value="">3D Transform</option>
+                        </optgroup>
+                    </select>
+                </ul>
+
+                <li>option : 옵션 생성</li>
+                <ul>
+                    <p>하나만 선택 가능한 경우 )</p>
+                    <select name="" id="">
+                        <option value="">김밥</option>
+                        <option value="">떡볶이</option>
+                        <option value="">순대</option>
+                        <option value="">어묵</option>
+                        <option value="">튀김</option>
+                    </select>
+                    <br>
+
+                    <p>여러 개 선택 가능한 경우 ) multiple 속성 사용,
+                        데스크톱 웹 페이지에서는 잘 사용 안함. 스마트폰에서는 어느 정도 예쁘게 나옴.</p>
+                    <select multiple="multiple">
+                        <option value="">김밥</option>
+                        <option value="">떡볶이</option>
+                        <option value="">순대</option>
+                        <option value="">어묵</option>
+                        <option value="">튀김</option>
+                    </select>
+                </ul>
+                    
+            </ul>
+
+                
+        </ul>
+
+        <p><ins>fieldset 태그와 legend 태그</ins></p>
+        <ul>
+            <p>입력 양식을 설명할 때 fieldset 태그와 legend 태그를 사용</p>
+            <p>legend 태그는 fieldset 태그 내부에서만 사용할 수 있다. (다른 곳에서 사용할 수는 있지만 아무 효과가 없다.)</p>
+
+            <fieldset>
+                <legend>입력 양식</legend>
+                <table>
+                    <tr>
+                        <td><label for="name">이름</label></td>
+                        <td><input id="name" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mail">이메일</label></td>
+                        <td><input id="mail" type="email"></td>
+                    </tr>
+                </table>
+                <input type="submit">
+            </fieldset>
+        </ul>
+    </ul>
+    <hr>
+
+    <h3 id="tag10"><i>공간 분할 태그</i></h3>
+    <ul>
+        <p><ins>div 태그와 span 태그</ins></p>
+        <ul>
+            <p>- 기본 공간 분할 태그 -</p>
+            <li>
+                <span>div : block 형식으로 공간 분할</span>
+                <span>( block 형식 : 차곡차곡 쌓아 올려지는 형식, 웹 페이지의 너비만큼 차지하면서 쌓아 올려짐 )</span>
+            </li>
+            
+            <li>
+                <span>span : inline 형식으로 공간 분할</span>
+                <span>( inline 형식 : 한 줄 안에 차례차례 위치하는 형식 )</span>
+            </li>            
+            <br>
+
+            <p>- block 형식의 태그와 inline 형식의 태그 -</p>
+            <li>block 형식 태그</li>
+            <ul>                
+                <li>div 태그</li>
+                <li>h1 태그 ~ h6 태그</li>
+                <li>p 태그</li>
+                <li>목록 태그</li>
+                <li>테이블 태그</li>
+                <li>form 태그</li>
+            </ul>
+            <li>inline 형식 태그</li>
+            <ul>
+                <li>span 태그</li>
+                <li>a 태그</li>
+                <li>i 태그</li>
+                <li>input 태그</li>
+                <li>글자 형식 태그</li>
+            </ul>
+                  
+                
+
+            
+        </ul>
+        <br>
+
+        <p><ins>HTML5 시멘틱 구조 태그</ins></p>        
+        <ul>
+            <p>시멘틱 웹 : 어떠한 태그가 어떠한 기능을 하는지 분별할 수 있고, 웹 페이지에서 데이터를 효율적으로 추출할 수 있도록 특정한 데이터에 의미를 부여해서 웹 페이지를 만드는 것</p>
+            <p>- HTML5 시멘틱 구조 태그 -</p>
+            <ul>
+                <li>header : 헤더를 의미</li>
+                <li>nav : 내비게이션을 의미</li>
+                <li>aside : 사이드에 위치하는 공간을 의미</li>
+                <li>section : 여러 중심 내용을 감싸는 공간을 의미</li>
+                <li>article : 글자가 많이 들어가는 부분을 의미</li>
+                <li>footer : 푸터를 의미</li>
+            </ul>
+            <p>※ 시멘틱 태그는 모두 div 태그와 같은 기능을 수행하는 태그</p>
+            <p>※ 태그 : 검색 엔진이나 그 이외의 기계적인 동작들이 웹 페이지를 쉽게 이해할 수 있게 하는 데 의미가 있다.</p>
+
+            <fieldset>
+                <legend>HTML5 시멘틱 태그를 사용한 간단한 웹 페이지</legend>                
+
+                <header>
+                    <h1>HTML5 Header</h1>
+                </header>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Menu - 1</a></li>
+                        <li><a href="#">Menu - 2</a></li>
+                        <li><a href="#">Menu - 3</a></li>                            
+                    </ul>
+                </nav>
+
+                <section>
+                    <article>
+                        <h1>Lorem ipsum dolor sit amet</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </article>
+                    <article>
+                        <h1>Lorem ipsum dolor sit amet</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </article>
+                </section>
+
+                <footer>
+                    <address>서울특별시 강서구 내발산동</address>
+                </footer>
+                
+            </fieldset>
+        </ul>
+    </ul>
+</body>
+</html>
