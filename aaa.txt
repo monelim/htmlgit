@@ -1,0 +1,9 @@
+git init 어떤 폴더랑 연결 할껀지 설정
+
+git add a.c 모든파일 올릴계획
+
+git add . 모든파일 올릴계획
+
+git commit -m "내용"
+
+git push //서버에 올리는거
